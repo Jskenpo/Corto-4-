@@ -168,7 +168,7 @@ bx lr
 op1: .word 0
 op2: .word 0
 error: .asciz "Ingreso incorrecto"
-ingreso: .asciz "Ingrese un comando: "
+ingreso: .asciz "Seleccione una de las siguientes opciones: "
 ingreso_op: .asciz "Ingrese un valor: "
 menu: .asciz "Calculadora\n+. suma\n-. resta\n*. mul\n/. div\n=.
 restulado\nq. salir"
