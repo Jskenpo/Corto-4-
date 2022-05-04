@@ -1,3 +1,15 @@
+ /* -----------------------------------------------
+* UNIVERSIDAD DEL VALLE DE GUATEMALA 
+* Organizacion de computadoras y Assembler
+* Ciclo 1 - 2022
+* Jose Santisteban - 21153
+* Brandon Sicay - 21757
+* 
+*  Ejercicio 1 y 2 de pasar instrucciones de lenguaje de alto nivel a bajo nivel
+*
+ ----------------------------------------------- */
+
+ 
  @@ codigo de assembler: se coloca en la seccion .text
     .text
     .align		2
@@ -7,7 +19,7 @@
 main:
     @@ grabar registro de enlace en la pila
     stmfd	sp!, {lr}
-    
+
 Ejecicio1:  
     ldr r0, =ejercicio1 // Se carga e imprime un mensaje para indicar donde inicia el ejercicio 1
     bl puts
@@ -15,11 +27,11 @@ Ejecicio1:
     ldr r3, =bandera // se carga bandera al registro r3
     ldr r3, [r3]    // se accede al valor de bandera
 
-    ldr r0, =mensajeBandera // se carga mensaje de bandera
+    ldr r0, =mensajeBandera // se pide que ingrese un valor para la bandera
     bl puts // se imprime el mensaje de bandera
 
-    ldr r0, =entrada // se carga el tipo de dato a recivir
-    ldr r1, =maximo // se establece la variable donde se recivira el valor
+    ldr r0, =entrada // se carga el mensaje de entrada
+    ldr r1, =maximo // se establece el valor maximo
     bl scanf
     
     ldr r1, =maximo
@@ -36,11 +48,11 @@ Ejecicio1:
 
 Ejercicio2:
     
-    ldr r0,=ejercicio2 // se carga e imprime un mensaje para indicar donde inicia el ejercicio 2
+    ldr r0,=ejercicio2 // imprime inicio del ejercicio 2
     bl puts
 
 Ciclo: 
-    ldr r0,=contador // se carga el contador
+    ldr r0,=contador // se carga el valor del contador
     ldr r1,[r0] // se accede al valor del contador
 
     
